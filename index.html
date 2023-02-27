@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Calculator app</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="main-container">
+    <div class="calculator-container">
+      <div class="calculator-top">
+      <div class="calculator-text">calc</div>
+      <div class="theme-container">
+        <div class="theme-text">THEME </div>
+        <div class="radio-wrapper">
+          <p class="theme-1-text">1</p>
+          <p class="theme-2-text">2</p>
+          <p class="theme-3-text">3</p>
+          <input type="radio" name="theme" class="radio-theme-1" checked id="radio-theme-1" />
+          <label for="radio-theme-1"></label>
+      
+          <input type="radio" name="theme" class="radio-theme-2" id="radio-theme-2" />
+          <label for="radio-theme-2"></label>
+      
+          <input type="radio" name="theme" class="radio-theme-3" id="radio-theme-3" />
+          <label for="radio-theme-3"></label>
+        </div>
+      </div>
+      </div>
+      <div class="calculator-body">
+        <div class="screen">
+          <div class="previous_div">
+            <p class="total" id="previous" data-value="0"></p>
+            <span id="operation"></span>
+          </div>
+          <p class="result-text" id="result" data-value="0">0</p>
+        </div>
+        <!-- <div class="screen">
+          <div class="previous_div">
+            <p class="total" id="previous" data-value="0"></p>
+            <span id="operator"></span>
+          </div>
+          <p class="total" id="current" data-value="0"></p>
+        </div> -->
+        <div class="buttons">
+          <button class="number" data-value="7">7</button>
+          <button class="number" data-value="8">8</button>
+          <button class="number" data-value="9">9</button>
+          <button class="light-button" id="delete">DEL</button>
+          <button class="number" data-value="4">4</button>
+          <button class="number" data-value="5">5</button>
+          <button class="number" data-value="6">6</button>
+          <button class="operators" data-value="+">+</button>
+          <button class="number" data-value="1">1</button>
+          <button class="number" data-value="2">2</button>
+          <button class="number" data-value="3">3</button>
+          <button class="operators" data-value="-">-</button>
+          <button class="number" data-value=".">.</button>
+          <button class="number" data-value="0">0</button>
+          <button class="operators" data-value="/">/</button>
+          <button class="operators" data-value="x">*</button>
+          <button class="light-button wide-button" id="reset">RESET</button>
+          <button class="bright-button wide-button" id="equal">=</button>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="toggleTheme.js"></script>
+<script src="applyCalculations.js"></script>
+<!-- <script src="tmp.js"></script> -->
+</html>

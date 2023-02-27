@@ -1,0 +1,422 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;500;700&display=swap");
+:root {
+  --ff-base: "Outfit", sans-serif;
+  --fw-thin: 300;
+  --fw-normal: 400;
+  --fw-bold: 600;
+  --main-width: 600px;
+   --togglerSize: 25px;
+ 
+  --mainbg: #3A4664;
+  --togglebg: #252C46;
+  --screenbg: #181F33;
+  
+  --brightBg: #D14030;
+  --brightBgShadow: #902417;
+ 
+  --lightBg: #647299;
+  --lightBgShadow: #414E72;
+ 
+  --defautBg: #EAE3DB;
+  --defaultBgShadow: #B5A398;
+
+  --textColor: white;
+}
+
+.theme_1 {
+  --mainbg: #3A4664;
+  --togglebg: #252C46;
+  --screenbg: #181F33;
+ 
+  --brightBg: #D14030;
+  --brightBgShadow: #902417;
+
+  --lightBg: #647299;
+  --lightBgShadow: #414E72;
+}
+
+.theme_2 {
+  --mainbg: #E6E6E6;
+  --togglebg: #D3CDCF;
+  --screenbg: #EEEEEE;
+
+  --brightBg: #C35608;
+  --brightBgShadow: #843D09;
+
+  --lightBg: #378286;
+  --lightBgShadow: #1C5D65;
+}
+
+.theme_3 {
+  --mainbg: #17062A;
+  --togglebg: #1E0936;
+  --screenbg: #1E0936;
+
+  --brightBg: #00DECF;
+  --brightBgShadow: #6DF8EF;
+
+  --lightBg: #57087C;
+  --lightBgShadow: #BE15F4;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  background-color: var(--mainbg);
+}
+
+.main-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator-container {
+  width: var(--main-width);
+}
+
+.calculatop-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.calculator-text {
+  font-family: var(--ff-base); 
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--textColor);
+}
+
+.calculator-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding: 10px;
+}
+
+.calculator-theme {
+  padding: 5px;
+}
+  
+.theme-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.theme-text {
+  font-family: var(--ff-base); 
+  font-weight: 700;
+  font-size: 10px;
+  margin-right: 10px;
+  color: var(--textColor);
+}
+
+.radio-wrapper {
+  width: 75px;
+  height: var(--togglerSize);
+  display: inline-block;
+  vertical-align: middle;
+  background: rgba(0, 0, 0, 0.4);
+  background-color: var(--togglebg);
+  border-radius: 30px;
+  position: relative;
+  margin-left: 1%;
+}
+
+p {
+  position: absolute;
+  z-index: 10;
+  font-size: 0.7em;
+  margin: 0;
+}
+
+.theme-1-text {
+  left: 12px;
+  top: -18px;
+  font-family: var(--ff-base);
+  color: var(--textColor);
+}
+
+.theme-2-text {
+  left: 35px;
+  top: -18px;
+  font-family: var(--ff-base);
+  color: var(--textColor);
+}
+
+.theme-3-text {
+  right: 10px;
+  top: -18px;
+  font-family: var(--ff-base);
+  color: var(--textColor);
+}
+
+label {
+  z-index: 9;
+}
+  
+input[type="radio"] {
+  display: none;
+}
+  
+i { 
+  z-index: 99;
+  font-size: 18px;
+}
+
+.radio-theme-2 + label {
+  display: inline-block;
+  width: var(--togglerSize);
+  height: var(--togglerSize);
+  border-radius: 50%;
+  position: absolute;
+  left: 33%;
+  transition: transform 1s;
+}
+  
+.radio-theme-2:checked + label {
+  border: 2px solid var(--brightBg);
+  display: inline-block;
+  width: var(--togglerSize);
+  height: var(--togglerSize);
+  border-radius: 50%;
+  background-color: var(--brightBg);
+}
+  
+.radio-theme-1 + label {
+  display: inline-block;
+  width: var(--togglerSize);
+  height: var(--togglerSize);
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  text-align: center;
+}
+  
+.radio-theme-1:checked + label {
+  display: inline-block;
+  width: var(--togglerSize);
+  height: var(--togglerSize);
+  border-radius: 50%;
+  background-color: var(--brightBg);
+  -moz-animation-duration: 0.4s;
+  -moz-animation-name: slidein;
+  -webkit-animation-duration: 0.4s;
+  -webkit-animation-name: slidein;
+  animation-duration: 0.4s;
+  animation-name: slidein;
+  -webkit-transform: translateZ(0);
+}
+  
+.radio-theme-3 + label {
+  display: inline-block;
+  width: var(--togglerSize);
+  height: var(--togglerSize);
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+}
+  
+.radio-theme-3:checked + label {
+  display: inline-block;
+  width: var(--togglerSize);
+  height: var(--togglerSize);
+  border-radius: 50%;
+  background-color: var(--brightBg);
+  -moz-animation-duration: 0.4s;
+  -moz-animation-name: slideno;
+  -webkit-animation-duration: 0.4s;
+  -webkit-animation-name: slideno;
+  animation-duration: 0.4s;
+  animation-name: slideno;
+  -webkit-transform: translateZ(0);
+}
+  
+@keyframes slidein {
+  from {
+      transform: translate(50px, 0);
+  }
+  to {
+      transform: translate(0px, 0px);
+  }
+}
+  
+@keyframes slideno {
+  from {
+    transform: translate(-50px,0);
+  }
+  to {
+      transform: translate( 0px, 0px);
+  }
+}
+  
+@keyframes returnLeft {
+  from {
+      transform: translate(-50px,0);
+  }
+  to {
+      transform: translate(0px,0);
+  }
+}
+  
+@keyframes returnRight {
+  from {
+      transform: translate(50px,0);
+  }
+  to {
+      transform: translate(0px,0);
+  }
+}
+
+.calculator-body {
+  width: 100%;
+}
+
+.screen {
+  width: var(--main-width);
+  height: 80px;
+  background-color: var(--screenbg);
+  color: white;
+  border-radius: 10px;
+  margin: 0 0 10px 0;
+  font-family: var(--ff-base); 
+  color: white;
+  font-weight: 700;
+  font-size: 28px; 
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.result-text {
+  position: relative;
+  margin: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+  color: white;
+}
+
+.buttons {
+  width: var(--main-width);
+  height: 100%;
+  background-color: var(--screen-color);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: var(--togglebg);
+  padding: 30px 35px 40px 30px;
+  gap: 25px;
+  border-radius: 10px;
+}
+
+button {
+  height: 60px;
+  border-radius: 10px;
+  border: none;
+  font-family: "League Spartan", sans-serif;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--defautBg);
+  color: var(--numberColor);
+  padding-top: 5px;
+  cursor: pointer;
+  box-shadow: 0px 4px 1px var(--defaultBgShadow);
+}
+
+.light-button {
+  background-color: var(--lightBg);
+  box-shadow: 0px 4px 1px var(--lightBgShadow);
+}
+
+.wide-button {
+  grid-column: span 2;
+}
+
+.bright-button {
+  background-color: var(--brightBg);
+  box-shadow: 0px 4px 1px var(--brightBgShadow);
+}
+
+  
+  
+  
+  

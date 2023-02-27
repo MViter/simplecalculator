@@ -26,15 +26,15 @@ function applyTheme(themeName, textColor = 'white') {
 formGroup.addEventListener("click", () => {
   const selectedTheme = Array.prototype.slice.call(radioButtons).find(button => button.checked)
     
-  if (selectedTheme.id === `radio-${THEMES.THEME_1}`) {
+  if (selectedTheme.id === 'radio-theme-1') {
     applyTheme(THEMES.THEME_1, 'white')
   } 
   
-  if (selectedTheme.id === `radio-${THEMES.THEME_2}`) {
+  if (selectedTheme.id === 'radio-theme-2') {
     applyTheme(THEMES.THEME_2, 'black')
   }
   
-  if (selectedTheme.id === `radio-${THEMES.THEME_3}`) {
+  if (selectedTheme.id === 'radio-theme-3') {
     applyTheme(THEMES.THEME_3, '#FFED3D')
   }
 });

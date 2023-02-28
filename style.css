@@ -84,7 +84,7 @@
 
 html,
 body {
-  height: 100%;
+  height: -webkit-fill-available;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   margin: 0;
@@ -130,6 +130,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
+  padding: 0 2px;
 }
 
 .calculator-theme {
@@ -417,6 +418,12 @@ button {
   }
   .buttons {
     width: fit-content;
+  }
+}
+
+@media only screen and (max-width: 500) {
+  header {
+    min-width: 500px;
   }
 }
 

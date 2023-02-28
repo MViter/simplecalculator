@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Calculator app</title>
   <link rel="stylesheet" href="style.css" />
@@ -10,27 +10,28 @@
 <body>
   <div class="main-container">
     <div class="calculator-container">
-      <div class="calculator-header">
-        <div class="calculator-text">calc</div>
-        <div class="theme-container">
-        <div class="theme-text">THEME </div>
-        <div class="radio-wrapper">
-          <p class="theme-1-text">1</p>
-          <p class="theme-2-text">2</p>
-          <p class="theme-3-text">3</p>
-          <input type="radio" name="theme" class="radio-theme-1" checked id="radio-theme-1" />
-          <label for="radio-theme-1"></label>
       
-          <input type="radio" name="theme" class="radio-theme-2" id="radio-theme-2" />
-          <label for="radio-theme-2"></label>
-      
-          <input type="radio" name="theme" class="radio-theme-3" id="radio-theme-3" />
-          <label for="radio-theme-3"></label>
-        </div>
-      </div>
-      </div>
       <div class="calculator-body">
         <div class="screen-buttons-container">
+          <div class="calculator-header">
+            <div class="calculator-text">calc</div>
+            <div class="theme-container">
+            <div class="theme-text">THEME </div>
+            <div class="radio-wrapper">
+              <p class="theme-1-text">1</p>
+              <p class="theme-2-text">2</p>
+              <p class="theme-3-text">3</p>
+              <input type="radio" name="theme" class="radio-theme-1" checked id="radio-theme-1" />
+              <label for="radio-theme-1"></label>
+          
+              <input type="radio" name="theme" class="radio-theme-2" id="radio-theme-2" />
+              <label for="radio-theme-2"></label>
+          
+              <input type="radio" name="theme" class="radio-theme-3" id="radio-theme-3" />
+              <label for="radio-theme-3"></label>
+            </div>
+          </div>
+          </div>
           <div class="screen">
             <div class="previous_div">
               <p class="total" id="previous" data-value="0"></p>
@@ -65,5 +66,4 @@
 </body>
 <script src="toggleTheme.js"></script>
 <script src="applyCalculations.js"></script>
-<!-- <script src="tmp.js"></script> -->
 </html>

@@ -9,7 +9,8 @@ const operations = {
   PLUS: '+',
   MINUS: '-',
   DIV: '/',
-  MULT: '*'
+  MULT: '*',
+  MULT_2: 'x'
 }
 
 resetButton.addEventListener("click", () => {
@@ -67,7 +68,8 @@ function calculateResult() {
     case operations.MINUS: {
       return parseFloat(result[0]) - parseFloat(result[2])
     }
-    case operations.MULT: {
+    case operations.MULT:
+      case operations.MULT_2: {
       return parseFloat(result[0]) * parseFloat(result[2])
     }
     case operations.DIV: {

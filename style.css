@@ -34,6 +34,9 @@
 
   --lightBg: #647299;
   --lightBgShadow: #414E72;
+
+  --textColor: white;
+  --textEqualColor: white;
 }
 
 .theme_2 {
@@ -46,6 +49,9 @@
 
   --lightBg: #378286;
   --lightBgShadow: #1C5D65;
+
+  --textColor: white;
+  --textEqualColor: white;
 }
 
 .theme_3 {
@@ -58,6 +64,9 @@
 
   --lightBg: #57087C;
   --lightBgShadow: #BE15F4;
+
+  --textColor: white;
+  --textEqualColor: black;
 }
 
 /*
@@ -378,6 +387,7 @@ button {
 .light-button {
   background-color: var(--lightBg);
   box-shadow: 0px 4px 1px var(--lightBgShadow);
+  color: var(--textColor);
 }
 
 .wide-button {
@@ -387,6 +397,7 @@ button {
 .bright-button {
   background-color: var(--brightBg);
   box-shadow: 0px 4px 1px var(--brightBgShadow);
+  color: var(--textEqualColor);
 }
 
 @media (mix-width: 600px) {

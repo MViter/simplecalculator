@@ -136,7 +136,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 0 2px;
+  padding: 0 5px;
 }
 
 .calculator-theme {
@@ -333,10 +333,19 @@ i {
   align-items: center;
 }
 
+.result-text {
+  position: relative;
+  margin: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+  color: white;
+  font-size: 36px;
+  font-family: var(--ff-base);
+}
+
 .screen {
-  /* width: var(--main-width); */
   max-width: var(--main-width);
-  /* min-width: var(--min-width); */
+  width: 90vw;
   height: 80px;
   background-color: var(--screenbg);
   color: white;
@@ -351,18 +360,9 @@ i {
   align-items: center;
 }
 
-.result-text {
-  position: relative;
-  margin: 10px;
-  word-wrap: break-word;
-  word-break: break-all;
-  color: white;
-  font-size: 36px;
-  font-family: var(--ff-base);
-}
-
 .buttons {
   max-width: var(--main-width);
+  width: 90vw;
   height: 100%;
   background-color: var(--screen-color);
   border-radius: 10px;
@@ -379,7 +379,7 @@ button {
   border-radius: 10px;
   border: none;
   font-family: "League Spartan", sans-serif;
-  font-size: 40px;
+  font-size: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -416,14 +416,17 @@ button {
 
   .calculator-body {
     width: 100%;
-  }
+  } */
   
   .screen {
-    width: 100px;
+   width: var(--main-width);
   }
   .buttons {
-    width: fit-content;
-  } */
+    width: var(--main-width);
+  }
+  button {
+    font-size: 40px;
+  }
   /* .screen-buttons-container {
     display: flex;
     flex-direction: column;

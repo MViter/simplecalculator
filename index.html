@@ -12,9 +12,9 @@
 <body>
   <div class="main-container">
     <div class="calculator-container">
-      <div class="calculator-top">
-      <div class="calculator-text">calc</div>
-      <div class="theme-container">
+      <div class="calculator-header">
+        <div class="calculator-text">calc</div>
+        <div class="theme-container">
         <div class="theme-text">THEME </div>
         <div class="radio-wrapper">
           <p class="theme-1-text">1</p>
@@ -32,44 +32,38 @@
       </div>
       </div>
       <div class="calculator-body">
-        <div class="screen">
-          <div class="previous_div">
-            <p class="total" id="previous" data-value="0"></p>
-            <span id="operation"></span>
+        <div class="screen-buttons-container">
+          <div class="screen">
+            <div class="previous_div">
+              <p class="total" id="previous" data-value="0"></p>
+              <span id="operation"></span>
+            </div>
+            <p class="result-text" id="result" data-value="0">0</p>
           </div>
-          <p class="result-text" id="result" data-value="0">0</p>
-        </div>
-        <!-- <div class="screen">
-          <div class="previous_div">
-            <p class="total" id="previous" data-value="0"></p>
-            <span id="operator"></span>
+          <div class="buttons">
+            <button class="number" data-value="7">7</button>
+            <button class="number" data-value="8">8</button>
+            <button class="number" data-value="9">9</button>
+            <button class="light-button" id="delete">DEL</button>
+            <button class="number" data-value="4">4</button>
+            <button class="number" data-value="5">5</button>
+            <button class="number" data-value="6">6</button>
+            <button class="operators" data-value="+">+</button>
+            <button class="number" data-value="1">1</button>
+            <button class="number" data-value="2">2</button>
+            <button class="number" data-value="3">3</button>
+            <button class="operators" data-value="-">-</button>
+            <button class="number" data-value=".">.</button>
+            <button class="number" data-value="0">0</button>
+            <button class="operators" data-value="/">/</button>
+            <button class="operators" data-value="x">*</button>
+            <button class="light-button wide-button" id="reset">RESET</button>
+            <button class="bright-button wide-button" id="equal">=</button>
           </div>
-          <p class="total" id="current" data-value="0"></p>
-        </div> -->
-        <div class="buttons">
-          <button class="number" data-value="7">7</button>
-          <button class="number" data-value="8">8</button>
-          <button class="number" data-value="9">9</button>
-          <button class="light-button" id="delete">DEL</button>
-          <button class="number" data-value="4">4</button>
-          <button class="number" data-value="5">5</button>
-          <button class="number" data-value="6">6</button>
-          <button class="operators" data-value="+">+</button>
-          <button class="number" data-value="1">1</button>
-          <button class="number" data-value="2">2</button>
-          <button class="number" data-value="3">3</button>
-          <button class="operators" data-value="-">-</button>
-          <button class="number" data-value=".">.</button>
-          <button class="number" data-value="0">0</button>
-          <button class="operators" data-value="/">/</button>
-          <button class="operators" data-value="x">*</button>
-          <button class="light-button wide-button" id="reset">RESET</button>
-          <button class="bright-button wide-button" id="equal">=</button>
         </div>
       </div>
       </div>
     </div>
-  </div>
 </body>
 <script src="toggleTheme.js"></script>
 <script src="applyCalculations.js"></script>

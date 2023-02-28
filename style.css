@@ -5,6 +5,7 @@
   --fw-normal: 400;
   --fw-bold: 600;
   --main-width: 600px;
+  --min-width: 230px;
    --togglerSize: 25px;
  
   --mainbg: #3A4664;
@@ -67,65 +68,17 @@
 *::after {
   box-sizing: border-box;
 }
-/*
-  2. Remove default margin
-*/
+
 * {
   margin: 0;
 }
-/*
-  3. Allow percentage-based heights in the application
-*/
+
 html,
 body {
   height: 100%;
-}
-/*
-  Typographic tweaks!
-  4. Add accessible line-height
-  5. Improve text rendering
-*/
-body {
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
-}
-/*
-  6. Improve media defaults
-*/
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-/*
-  7. Remove built-in form typography styles
-*/
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-/*
-  8. Avoid text overflows
-*/
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-
-h1,
-h2,
-h3 {
-  line-height: 1;
+  margin: 0;
 }
 
 body {
@@ -137,14 +90,18 @@ body {
 .main-container {
   position: absolute;
   width: 100%;
+  min-width: var(--min-width);
   height: 100%;
   display: flex;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  padding: 10px;
 }
 
 .calculator-container {
-  width: var(--main-width);
+  width: 100%;
+  min-width: var(--min-width);
 }
 
 .calculatop-header {
@@ -159,13 +116,15 @@ body {
   color: var(--textColor);
 }
 
-.calculator-top {
+.calculator-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
-  width: 100%;
+  max-width: 440px;
   padding: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .calculator-theme {
@@ -211,6 +170,7 @@ p {
   top: -18px;
   font-family: var(--ff-base);
   color: var(--textColor);
+  font-weight: bold;
 }
 
 .theme-2-text {
@@ -218,6 +178,7 @@ p {
   top: -18px;
   font-family: var(--ff-base);
   color: var(--textColor);
+  font-weight: bold;
 }
 
 .theme-3-text {
@@ -225,6 +186,7 @@ p {
   top: -18px;
   font-family: var(--ff-base);
   color: var(--textColor);
+  font-weight: bold;
 }
 
 label {
@@ -257,6 +219,7 @@ i {
   height: var(--togglerSize);
   border-radius: 50%;
   background-color: var(--brightBg);
+  border: 3px solid  var(--togglebg);
 }
   
 .radio-theme-1 + label {
@@ -282,6 +245,7 @@ i {
   animation-duration: 0.4s;
   animation-name: slidein;
   -webkit-transform: translateZ(0);
+  border: 3px solid  var(--togglebg);
 }
   
 .radio-theme-3 + label {
@@ -307,6 +271,7 @@ i {
   animation-duration: 0.4s;
   animation-name: slideno;
   -webkit-transform: translateZ(0);
+  border: 3px solid  var(--togglebg);
 }
   
 @keyframes slidein {
@@ -347,10 +312,18 @@ i {
 
 .calculator-body {
   width: 100%;
+  min-width: var(--min-width);
+  justify-content: center;
+  min-width: var(--min-width);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .screen {
-  width: var(--main-width);
+  /* width: var(--main-width); */
+  max-width: var(--main-width);
+  /* min-width: var(--min-width); */
   height: 80px;
   background-color: var(--screenbg);
   color: white;
@@ -374,7 +347,7 @@ i {
 }
 
 .buttons {
-  width: var(--main-width);
+  max-width: var(--main-width);
   height: 100%;
   background-color: var(--screen-color);
   border-radius: 10px;
@@ -414,6 +387,26 @@ button {
 .bright-button {
   background-color: var(--brightBg);
   box-shadow: 0px 4px 1px var(--brightBgShadow);
+}
+
+@media (mix-width: 600px) {
+  .main-container {
+    padding: 10px;;
+  }
+  .calculator-container {
+    width: 100%; 
+  }
+
+  .calculator-body {
+    width: 100%;
+  }
+  
+  .screen {
+    width: 100px;
+  }
+  .buttons {
+    width: fit-content;
+  }
 }
 
   
